@@ -39,27 +39,34 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <p class="w3-xlarge">Help build your community!</p>
 </header>
 
-<!-- First Grid -->
+<!-- New Entry -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <a href="newPost.html"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">+ Create new entry</button></a>
-    </div>
+    <h1><b>Write a Review</b></h1>
+    <h5 class="w3-padding-32"><b>Title</b></h5>
+    <form>
+    <input type="textbox" size="50" name="title"/>
+    </form>
+    <h5 class="w3-padding-32"><b>Organization</b></h5>
+    <form>
+    <input type="company" size="50" name="title"/>
+    </form>
+    <h5 class="w3-padding-32"><b>Location</b></h5>
+    <form>
+    <input type="textbox" size="50" name="title"/>
+    </form>
+    <h5 class="w3-padding-32"><b>Rating (out of 5)</b></h5>
+    <form>
+    <input type="textbox" size="20" name="title"/>
+    </form>
+    <h5 class="w3-padding-32"><b>Description</b></h5>
+    <form>
+    <textarea rows="10" cols="100"></textarea>
+    </form>
+
+    <a href="FP_Community_Service_Opportunities.html"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Submit</button></a>
   </div>
 </div>
-
-
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
 
 </body>
 </html>

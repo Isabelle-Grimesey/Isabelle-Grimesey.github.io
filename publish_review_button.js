@@ -1,12 +1,10 @@
-reviewList = []
-
-function storeData(p1, p2, p3, p4, p5) {
-  var dict = {
-  title: p1,
-  organization: p2,
-  location: p3,
-  rating: p4,
-  description: p5
+function make_json(form){
+  var json = {
+    ("title":form.first.value),
+    ("organization":form.second.value),
+    ("location":form.third.value),
+    ("rating":form.fourth.value),
+    ("description":form.fifth.value)
   };
-  reviewList.append(dict);
+
 }

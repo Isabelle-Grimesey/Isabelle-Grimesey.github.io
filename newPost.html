@@ -50,28 +50,34 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <h1><b>Write a Review</b></h1>
-    <h5 class="w3-padding-32"><b>Title</b></h5>
-    <form>
-    <input type="textbox" size="50" name="title"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Organization</b></h5>
-    <form>
-    <input type="company" size="50" name="organization"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Location</b></h5>
-    <form>
-    <input type="textbox" size="50" name="location"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Rating (out of 5)</b></h5>
-    <form>
-    <input type="textbox" size="20" name="rating"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Description</b></h5>
-    <form>
-    <textarea rows="10" cols="100" name="description"></textarea>
-    </form>
 
-    <a href="FP_Community_Service_Opportunities.html"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="storeData('title', 'organization', 'location', 'rating', 'description')">Submit</button></a>
+    <form onsubmit="make_json(this);">
+    <h5 class="w3-padding-32"><b>Title</b></h5>
+
+    <input type="textbox" size="50" name="title"/>
+
+    <h5 class="w3-padding-32"><b>Organization</b></h5>
+
+    <input type="textbox" size="50" name="organization"/>
+
+    <h5 class="w3-padding-32"><b>Location</b></h5>
+
+    <input type="textbox" size="50" name="location"/>
+
+    <h5 class="w3-padding-32"><b>Rating (out of 5)</b></h5>
+
+    <input type="textbox" size="20" name="rating"/>
+
+    <h5 class="w3-padding-32"><b>Description</b></h5>
+
+    <!-- <textarea rows="10" cols="100" name="description"></textarea> -->
+    <input type="textbox" size="50" name ="description"/>
+
+    <!-- <a href="FP_Community_Service_Opportunities.html"> -->
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit">Submit</button>
+    <!-- </a> -->
+  </form>
+
   </div>
 </div>
 

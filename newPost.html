@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
+
+<head>
 <title>W3.CSS Template</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="publish_review_button.js"></script>
+
 <style>
-header{
-  background-image: url(background.png);
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: repeat-x;
-}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
+</head>
+
 <body>
 
 <!-- Navbar -->
@@ -25,7 +26,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-white w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="FP_Homepage.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="FP_Volunteer_Opportunities.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Volunteer Opportunities</a>
+    <a href="FP_Community_Service_Opportunities.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Community Service Opportunities</a>
     <a href="FP_My_Personal_Journal.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">My Personal Journal</a>
     <a href="FP_About_Us.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">About Us</a>
   </div>
@@ -41,7 +42,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Header -->
 <header class="w3-container w3-white w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">VOLUNTEER OPPORTUNITIES</h1>
+  <h1 class="w3-margin w3-jumbo">COMMUNITY SERVICE OPPORTUNITIES</h1>
   <p class="w3-xlarge">Help build your community!</p>
 </header>
 
@@ -49,30 +50,48 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <h1><b>Write a Review</b></h1>
-    <h5 class="w3-padding-32"><b>Title</b></h5>
-    <form>
-    <input type="textbox" size="50" name="title"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Organization</b></h5>
-    <form>
-    <input type="company" size="50" name="title"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Location</b></h5>
-    <form>
-    <input type="textbox" size="50" name="title"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Rating (out of 5)</b></h5>
-    <form>
-    <input type="textbox" size="20" name="title"/>
-    </form>
-    <h5 class="w3-padding-32"><b>Description</b></h5>
-    <form>
-    <textarea rows="10" cols="100"></textarea>
-    </form>
 
-    <a href="FP_Volunteer_Opportunities.html"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Submit</button></a>
+<form id="reviewform">
+  <!-- onsubmit="WriteToFile(this['title'].value, this['organization'].value, this['location'].value, this['rating'].value, this['description'].value)"> -->
+  <!-- (this['name'].value, this['text'].value) -->
+    <h5 class="w3-padding-32"><b>Title</b></h5>
+
+    <input type="textbox" size="50" id="title"/>
+
+    <h5 class="w3-padding-32"><b>Organization</b></h5>
+
+    <input type="textbox" size="50" id="organization"/>
+
+    <h5 class="w3-padding-32"><b>Location</b></h5>
+
+    <input type="textbox" size="50" id="location"/>
+
+    <h5 class="w3-padding-32"><b>Rating (out of 5)</b></h5>
+
+    <input type="textbox" size="20" id="rating"/>
+
+    <h5 class="w3-padding-32"><b>Description</b></h5>
+
+    <textarea rows="10" cols="100" id="description"></textarea>
+
+    <!-- <a href="FP_Community_Service_Opportunities.html"> -->
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" onclick="WriteToFile()">Submit</button>
+    <!-- </a> -->
+  </form>
+
   </div>
 </div>
 
+<!-- <p id="display"></p> -->
+
 </body>
 </html>
+
+<!-- create ids for inputs to replace names
+use document.getElementById to retrieve inputs (take out parameters and arguments)
+set each input equal to a variable
+create variable equal to dictionary w/set key names + variable values
+explore writing into JSON separate file w/class survey; implement into myFunction
+test
+check back up
+test w/both onsubmit in form and onclick in button -->

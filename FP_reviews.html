@@ -12,17 +12,22 @@ body{
     background-color: #FFE4E1;
 }
 header{
-  background-image: url("background.png");
-  background-repeat: repeat-x;
-  background-position: top;
+  background-image: url(background.png);
   background-attachment: fixed;
+  background-position: top;
+  background-repeat: repeat-x;
 }
-div.a {
-    text-align: center;
+
+div.b {
+  text-align: left;
+}
+div.a{
+  text-align: center;
 }
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
 </style>
 <body>
 
@@ -31,9 +36,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-white w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="FP_Homepage.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="FP_Community_Service_Opportunities.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Community Service Opportunities</a>
-    <a href="FP_My_Personal_Journal.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">My Personal Journal</a>
-    <a href="FP_About_Us.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
+    <a href="FP_Community_Service_Opportunities.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Volunteer Opportunities</a>
+    <a href="FP_My_Personal_Journal.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">My Personal Journal</a>
+    <a href="FP_About_Us.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">About Us</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -46,48 +51,53 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-light-grey w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">MY JOURNAL</h1>
-    <a href="FP_new_entry.html"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Create New Entry</button></a>
+<header class="w3-container w3-white w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">VOLUNTEER OPPORTUNITIES</h1>
+  <p class="w3-xlarge">Find available volunteering opportunities just for you! Read about the experiences of others and write about your own.</p>
+  <a href="FP_reviews.html"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Read the Reviews</button></a>
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-light-pink w3-padding-64 w3-container">
+<div class="w3-row-padding w3-light-pink w3-padding-60 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <div class="a">
-      <h1>Number of Entries: </h1>
-      <h1 class="w3-padding-32 w3-text-black">XX</h1>
-        </div>
-      <p class="w3-text-black"></p>
+      <div class="b">
+      </div>
     </div>
-
-    <div class="w3-third w3-center">
-      <i class="stacks.png w3-padding-64 w3-text-red"></i>
-      <img src="stacks.png" style="width:90%;">
+  </div>
+</div>
+<div class="w3-row-padding w3-light-pink w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!-- <div class="w3-third w3-center"> -->
+    <div class="a">
+      <a href="https://www.salvationarmyusa.org/usn/">
+      <p><h2>The Salvation Army</h2></p>
+    </a>
+      <h4>The Salvation Army is an organization that focuses their efforts into helping all kinds of people, from the unemployed to those overcoming disasters. You can help by donating your money or be a volunteer in one of their many locations.</h4>
+    </div>
+    </div>
+<div class="w3-row-padding w3-light-pink w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!-- <div class="w3-third w3-center"> -->
+    <div class="a">
+      <a href="https://outreach360.org/">
+      <p><h2>Outreach 360</h2></p>
+    </a>
+    <h5>Outreach 360, an organization that specializes in travelling abroad to volunteer in developing countries, provides affordable trips to places such as Nicaragua and the Dominican Republic for people that are open-minded and excited to learn about cultures other than their own. Volunteers get the chance to explore and learn about new cultures while providing support to those who need it.</h5>
     </div>
   </div>
 </div>
 
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-pink w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-      <img src="hourglass.png" style="width:60%;">
-    </div>
-
     <div class="w3-twothird">
-      <div class="a">
-      <h1>Number of Logged Hours: </h1>
-      <h1 class="w3-padding-32 w3-text-black">XX</h1>
     </div>
-      <p class="w3-text-black"></p>
+      <p class="w3-text-grey"></p>
     </div>
   </div>
 </div>
 
 <div class="w3-container w3-light-pink w3-center w3-opacity w3-padding-64">
 </div>
+
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button

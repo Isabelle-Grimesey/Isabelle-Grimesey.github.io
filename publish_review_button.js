@@ -2,7 +2,6 @@ var reviewSingle = "0";
 var fileName = "test.txt"
 // document.getElementById("name1").value;
 function WriteToFile() {
-
   title=document.getElementById("content1").value;
   organization=document.getElementById("content2").value;
    // alert("title: " +title)

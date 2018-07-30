@@ -51,31 +51,33 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-content">
     <h1><b>Write a Review</b></h1>
 
-<form id="reviewform">
-  <!-- onsubmit="WriteToFile(this['title'].value, this['organization'].value, this['location'].value, this['rating'].value, this['description'].value)"> -->
-  <!-- (this['name'].value, this['text'].value) -->
-    <h5 class="w3-padding-32"><b>Title</b></h5>
+<form id="reviewform" method=”post” action=”process-form-data.php”>
+  <!-- onsubmit=WriteToFile() -->
+<!-- download(this['name'].value, (this['content1'].value + this['content2'].value + this['content3'].value + this['content4'].value + this['content5'].value))" -->
+    <h5 class="w3-padding-32"><label><b>Title</b></label></h5>
 
-    <input type="textbox" size="50" id="title"/>
+    <input type="textbox" size="50" name="content1" id="content1"/>
 
-    <h5 class="w3-padding-32"><b>Organization</b></h5>
+    <h5 class="w3-padding-32"><label><b>Organization</b></label></h5>
 
-    <input type="textbox" size="50" id="organization"/>
+    <input type="textbox" size="50" name="content2" id="content2"/>
 
-    <h5 class="w3-padding-32"><b>Location</b></h5>
+    <h5 class="w3-padding-32"><label><b>Location</b></label></h5>
 
-    <input type="textbox" size="50" id="location"/>
+    <input type="textbox" size="50" id="content3"/>
 
-    <h5 class="w3-padding-32"><b>Rating (out of 5)</b></h5>
+    <h5 class="w3-padding-32"><label><b>Rating (out of 5)</b></label></h5>
 
-    <input type="textbox" size="20" id="rating"/>
+    <input type="textbox" size="20" id="content4"/>
 
-    <h5 class="w3-padding-32"><b>Description</b></h5>
+    <h5 class="w3-padding-32"><label><b>Description</b></label></h5>
 
-    <textarea rows="10" cols="100" id="description"></textarea>
+    <textarea rows="10" cols="100" id="content5"></textarea>
 
+    <!-- <input type="text" id="name1" value="test.txt"> -->
     <!-- <a href="FP_Community_Service_Opportunities.html"> -->
-      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" onclick="WriteToFile()">Submit</button>
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" >Submit</button>
+      <!-- onclick="WriteToFile(reviewform)" -->
     <!-- </a> -->
   </form>
 
